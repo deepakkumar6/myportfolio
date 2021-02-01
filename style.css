@@ -359,20 +359,23 @@ section .title::after{
     top:0;
     background: crimson;
 }
+.skills-content .right .python_prog::before{
+    width: 98%;
+}
+.skills-content .right .dsa::before{
+    width: 95%;
+}
 .skills-content .right .html::before{
-    width: 90%;
-}
-.skills-content .right .css::before{
-    width: 60%;
-}
-.skills-content .right .js::before{
     width: 80%;
 }
-.skills-content .right .php::before{
-    width: 50%;
+.skills-content .right .css::before{
+    width: 80%;
 }
-.skills-content .right .mysql::before{
+.skills-content .right .js::before{
     width: 70%;
+}
+.skills-content .right .sql::before{
+    width: 80%;
 }
 
 
