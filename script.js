@@ -21,14 +21,14 @@ $(document).ready(function(){
 
     // typing animation script
     var typed = new Typed(".typing",{
-        strings:['problem solver','bloger','freelancer','competitive programmer'],
+        strings:['Problem Solver','Web Developer','Python Developer','Competitive Programmer','Software Developer'],
         typeSpeed:100,
         backSpeed:60,
         loop:true
 
     });
     var typed = new Typed(".typing-2",{
-        strings:['problem solver','bloger','freelancer','competitive programmer'],
+        strings:['Problem Solver','Web Developer','Python Developer','Competitive Programmer','Software Developer'],
         typeSpeed:100,
         backSpeed:60,
         loop:true
