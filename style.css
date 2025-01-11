@@ -545,6 +545,72 @@ section .title::after{
     background: none;
 }
 
+/* Useful Links Section Styling */
+.useful-links {
+    padding: 40px 20px;
+    background: #f9f9f9;
+}
+
+.useful-links .title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.links-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.links-content .column {
+    flex: 1 1 calc(25% - 20px); /* Four columns */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.links-content .column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.links-content .column div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.links-content .column a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.links-content .column a:hover {
+    color: #0056b3;
+}
+
+.links-content .column button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.links-content .column button:hover {
+    background: #0056b3;
+}
+
 
 /*footer section styling*/
 footer{

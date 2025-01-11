@@ -13,6 +13,7 @@ $(document).ready(function(){
         }
     });
 
+
     // slide-up script
     $(".scroll-up-btn").click(function(){
         $('html').animate({scrollTop:0});
@@ -68,3 +69,13 @@ $(document).ready(function(){
 
 
 });
+
+// Function to copy links to clipboard
+function copyLink(id) {
+    const link = document.getElementById(id).href;
+    navigator.clipboard.writeText(link).then(() => {
+        alert('Link copied to clipboard: ' + link);
+    }).catch(err => {
+        console.error('Failed to copy link: ', err);
+    });
+}
