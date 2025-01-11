@@ -137,6 +137,19 @@ function copyLink(id) {
             console.error('Failed to copy link: ', err);
         });
 }
+document.getElementById('contact-form').addEventListener('submit', sendEmail);
+
+function sendEmail(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedMessage = encodeURIComponent(`${message} \n\n${name},\nOrganization Name: `);
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=deepakkumar006007@gmail.com&su=${encodedSubject}&body=${encodedMessage}`;
+    window.open(mailtoLink, '_blank');
+}
+
 
 // Call the function to load links
 loadLinks();
