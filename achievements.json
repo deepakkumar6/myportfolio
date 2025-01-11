@@ -1,0 +1,47 @@
+{
+    "achievements": [
+      {
+        "rank": "1521 Max",
+        "platform": "Codeforces",
+        "title": "Specialist",
+        "description": "Solved 660 Problems",
+        "link": "https://codeforces.com/profile/yourUsername"
+      },
+      {
+        "rank": "1864 Max",
+        "platform": "Codechef",
+        "title": "4 Star",
+        "description": "Solved 221 Problems",
+        "link": "https://www.codechef.com/users/yourUsername"
+      },
+      {
+        "rank": "1st Rank / 850",
+        "platform": "Codigo by NIT Trichy",
+        "title": "Winner",
+        "description": "1st Rank in the event",
+        "link": "https://example.com/codigo"
+      },
+      {
+        "rank": "7th Rank / 1300",
+        "platform": "Codechef Starter 18",
+        "title": "Top 10",
+        "description": "Ranked 7th in the competition",
+        "link": "https://www.codechef.com/START18"
+      },
+      {
+        "rank": "71 / 2000",
+        "platform": "Codechef Dementia",
+        "title": "Ranked",
+        "description": "Positioned 71st in the contest",
+        "link": "https://www.codechef.com/Dementia"
+      },
+      {
+        "rank": "1180 Problems",
+        "platform": "Leetcode",
+        "title": "Problem Solver",
+        "description": "Solved over 1180 problems on Leetcode",
+        "link": "https://leetcode.com/yourUsername"
+      }
+    ]
+  }
+  

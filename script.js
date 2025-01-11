@@ -12,31 +12,23 @@ $(document).ready(function(){
             $(".scroll-up-btn").removeClass("show");
         }
     });
-
-
     // slide-up script
     $(".scroll-up-btn").click(function(){
         $('html').animate({scrollTop:0});
     });
-
-
     // typing animation script
     var typed = new Typed(".typing",{
         strings:['Problem Solver','Web Developer','Python Developer','Competitive Programmer','Software Developer'],
         typeSpeed:100,
         backSpeed:60,
         loop:true
-
     });
     var typed = new Typed(".typing-2",{
         strings:['Problem Solver','Web Developer','Python Developer','Competitive Programmer','Software Developer'],
         typeSpeed:100,
         backSpeed:60,
         loop:true
-
     });
-
-
     //toggle menu/navbar script
     $('.menu-btn').click(function(){
         $('.navbar .menu').toggleClass('active');
@@ -61,13 +53,8 @@ $(document).ready(function(){
                 items:3,
                 nav:false
             },
-
-
         }
-
     });
-
-
 });
 
 // Function to fetch and populate links from JSON
@@ -76,10 +63,8 @@ async function loadLinks() {
         // Fetch JSON data
         const response = await fetch('links.json'); // Ensure 'links.json' is in the same directory
         const data = await response.json();
-
         // Container to hold links
         const container = document.getElementById('links-container');
-
         // Define sections
         const sections = [
             { title: 'Socials', key: 'socials' },
@@ -87,27 +72,24 @@ async function loadLinks() {
             { title: 'Projects', key: 'projects' },
             // { title: 'Courses', key: 'courses' }
         ];
-
         // Iterate over sections and populate links
         sections.forEach(section => {
             const column = document.createElement('div');
             column.classList.add('column');
-
             // Add section title
             const sectionTitle = document.createElement('h3');
             sectionTitle.textContent = section.title;
             column.appendChild(sectionTitle);
-
             // Add links for the section
             const links = data[section.key];
             for (const [id, url] of Object.entries(links)) {
                 const linkDiv = document.createElement('div');
-
                 const link = document.createElement('a');
                 link.href = url;
                 link.id = id;
                 link.target = '_blank'; // Open link in a new tab
                 link.textContent = id.charAt(0).toUpperCase() + id.slice(1);
+                link.classList.add('check-link')
 
                 const button = document.createElement('button');
                 button.textContent = 'Copy';
@@ -117,7 +99,6 @@ async function loadLinks() {
                 linkDiv.appendChild(button);
                 column.appendChild(linkDiv);
             }
-
             // Append column to the container
             container.appendChild(column);
         });
@@ -126,7 +107,6 @@ async function loadLinks() {
     }
 }
 
-// Function to copy links to clipboard
 function copyLink(id) {
     const link = document.getElementById(id).href;
     navigator.clipboard.writeText(link)
@@ -137,6 +117,7 @@ function copyLink(id) {
             console.error('Failed to copy link: ', err);
         });
 }
+
 document.getElementById('contact-form').addEventListener('submit', sendEmail);
 
 function sendEmail(event) {
@@ -150,6 +131,29 @@ function sendEmail(event) {
     window.open(mailtoLink, '_blank');
 }
 
+fetch('achievements.json')
+    .then(response => response.json())
+    .then(data => {
+        const container = document.getElementById('achievements-container');
 
-// Call the function to load links
+        data.achievements.forEach(achievement => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            card.innerHTML = `
+                <div class="box">
+                    <div class="text">${achievement.title} (${achievement.rank}) on ${achievement.platform}</div>
+                    <p>
+                        ${achievement.description} 
+                        <a href="${achievement.link}" target="_blank">
+                            <i class="fas fa-external-link-alt link-icon"></i>
+                        </a>
+                    </p>
+                </div>
+            `;
+
+            container.appendChild(card);
+        });
+    })
+    .catch(error => console.error('Error loading achievements:', error));
 loadLinks();
