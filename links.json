@@ -1,0 +1,19 @@
+{
+    "socials": {
+        "linkedin": "https://www.linkedin.com/in/feelme/",
+        "github": "https://github.com/deepakkumar6",
+        "leetcode": "https://leetcode.com/u/feelme/",
+        "resume": "https://drive.google.com/file/d/1yF9RMyRSoPOZv2GAmGxg8_liG4DBfHrU/view?usp=sharing",
+    },
+    "achievements": {
+        "award1": "https://example.com/award1",
+        "award2": "https://example.com/award2"
+    },
+    "projects": {
+        "Tic Tac Toe(Pygame)": "https://github.com/deepakkumar6/Games/tree/main/TicTacToe_pygame",
+        "Tetris (Pygame)": "https://github.com/deepakkumar6/Games/tree/main/Tetris_pygame"
+    },
+    "courses": {
+        "course1": "https://example.com/course1"
+    }
+}
